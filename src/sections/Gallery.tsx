@@ -11,7 +11,7 @@ interface GalleryImage {
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [forceVisible, setForceVisible] = useState(false)
-  const ref = useRef(null)
+  const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.1, margin: '-100px' })
 
   // Force visibility check when section comes into view or on mount
